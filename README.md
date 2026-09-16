@@ -6,7 +6,7 @@ A pixel-close, responsive and animated recreation of the *Vyrix Beta 2* landing 
 
 | | |
 |---|---|
-| 🔗 **Live Demo (Vercel)** | `https://aspire-mauve-six.vercel.app/` |
+| 🔗 **Live Demo (Vercel)** | [Visit Live Demo](https://aspire-mauve-six.vercel.app/) |
 | 🎨 **Figma Design** | https://www.figma.com/design/VfqBzCZPLZVkkoY5QvFDHV/Interns-Task?m=auto&t=2CnCY6AKgM65vfay-1 |
 | 💻 **Source Code** | https://github.com/paritoshchauhan01/Aspire |
 
