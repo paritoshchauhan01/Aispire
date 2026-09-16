@@ -1,0 +1,131 @@
+.platform-section {
+  /* Outer section wrapper for the full platform chooser block. */
+  padding: 36px 24px 80px;
+  background: var(--color-bg, #f4f4f4);
+  text-align: center;
+}
+
+.platform-section__heading {
+  /* Main heading above the platform selector cards. */
+  margin: 0 auto 28px;
+  font-size: clamp(2.1rem, 2.8vw, 3.3rem);
+  font-family: var(--font-display, system-ui, -apple-system, sans-serif);
+  color: #212121;
+  line-height: 1.1;
+  letter-spacing: -0.06em;
+}
+
+.platform-section__grid {
+  /* Flex layout keeps the Windows and Mac cards centered with a gap between them. */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.platform-section__divider {
+  /* Vertical separator between the two platform columns. */
+  width: 1px;
+  height: 230px;
+  background: rgb(247, 245, 245);
+  align-self: center;
+}
+
+.platform-card {
+  /* Each platform column contains the icon label and action buttons. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-width: 260px;
+  padding: 0 12px;
+}
+
+.platform-card__badge {
+  /* Row containing the platform icon and platform name. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 64px;
+}
+
+.platform-card__badge img {
+  /* Platform icon sizing for the badge row. */
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.platform-card__badge span {
+  /* Label text shown beside the platform icon. */
+  font-family: var(--font-body, system-ui, -apple-system, sans-serif);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 2vw, 2.1rem);
+  color: #000000;
+  line-height: 1.2;
+}
+
+.platform-card__actions {
+  /* Button row below the platform label. */
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  max-width: 430px;
+}
+
+.platform-card__button {
+  /* Shared button styling for both install and download actions. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.platform-card__button:hover {
+  /* Small hover lift to add subtle interactivity. */
+  transform: translateY(-1px);
+}
+
+.platform-card__button--filled {
+  /* Primary download button in teal-blue. */
+  background: #2a8bb0;
+  color: #f5f5f5;
+  border: 1px solid #2a8bb0;
+}
+
+.platform-card__button--outline {
+  /* Secondary install button styled like an outlined outline button. */
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: #111111;
+  background: transparent;
+}
+
+@media (max-width: 720px) {
+  /* Mobile layout collapses the divider and keeps cards stacked cleanly. */
+  .platform-section__grid {
+    gap: 20px;
+  }
+
+  .platform-section__divider {
+    display: none;
+  }
+
+  .platform-card {
+    width: 100%;
+    min-width: 0;
+  }
+}
